@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Conversion</title>
+    <script src="../scripts/crypto-convert-scripts.js"></script>
+    <link rel="stylesheet" href="../css/crypto-convert-style.css">
+</head>
+<body>
+    <main>
+        <h1>Crytpo Conversion</h1>
+
+        <div id="conversion-div">
+            <span id="conversion-info">Crypto to Fiat</span> 
+            <button type="button" id="swap">swap</button>
+        </div>
+
+        <form>
+            <div id="info">
+                <div id="convert-from">
+                    <select name="cryptos" id="cryptoList">
+                        <option data-ticker="" value="">Coins</option>
+                        <option data-ticker="BTC" value="bitcoin">BTC</option>
+                        <option data-ticker="ETH" value="ethereum">ETH</option>
+                        <option data-ticker="ADA" value="cardano">ADA</option>
+                        <option data-ticker="SOL" value="solana">SOL</option>
+                    </select>
+                </div>
+    
+                <input type="number" name="amount" id="amount" min="0" value="0">
+    
+                <div id="convert-to">
+                    <select name="fiat" id="fiatList">
+                        <option data-ticker="" value="">Fiat</option>
+                        <option data-ticker="USD" value="usd">USD</option>
+                        <option data-ticker="EUR" value="eur">EUR</option>
+                        <option data-ticker="BRL" value="brl">BRL</option>
+                        <option data-ticker="JPY" value="jpy">JPY</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button type="button" id="convert">Convert</button>
+        </form>
+
+        <section id="display">
+            <h3></h3>
+            <h4>Conversion appears here</h4>
+        </section>
+
+        <footer>
+            <h6>Written and designed by Frederico Mozzato&copy; - 2023</h6>
+        </footer>
+    </main>
+</body>
+</html>

@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const conversionInfo = document.getElementById("swap");
         const convertFromElement = document.getElementById("convert-from");
         const convertToElement = document.getElementById("convert-to");
-        document.getElementById("amount").value = 0;
 
         if (conversionType) {
             // convert from fiat to crypto
@@ -81,12 +80,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (conversionType) {
             conversion = amount * rate;
-            document.querySelector("#display h3").innerHTML = `${amount} ${cryptoTicker} = ${conversion.toLocaleString(undefined)} ${fiatTicker}`;
+            document.querySelector("#display h3").innerHTML = `${conversion.toLocaleString(undefined)} ${fiatTicker}`;
+            document.querySelector("#display h5").innerHTML = `1 ${cryptoTicker} = ${rate.toLocaleString(undefined)} ${fiatTicker}`;
             document.querySelector("h4").hidden = true;
 
         } else {
             conversion = amount * (1 / rate);
-            document.querySelector("#display h3").innerHTML = `${amount} ${fiatTicker} = ${conversion.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 5})} ${cryptoTicker}`;
+            document.querySelector("#display h3").innerHTML = `${conversion.toLocaleString(undefined, {minimumFractionDigits: 3, maximumFractionDigits: 5})} ${cryptoTicker}`;
+            document.querySelector("#display h5").innerHTML = `1 ${fiatTicker} = ${(1 / rate).toLocaleString(undefined, {minimumFractionDigits: 3, maximumFractionDigits: 5})} ${cryptoTicker}`;
+
             document.querySelector("h4").hidden = true;
         }
     }

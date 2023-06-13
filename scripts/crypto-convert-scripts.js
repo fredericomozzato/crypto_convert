@@ -17,30 +17,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const cryptoList = document.getElementById("crypto-list");
     const fiatList = document.getElementById("fiat-list");
 
-    // cryptoInput.onchange = function() {
-    //     crypto = this.value;
-    // }
-
-    // fiatInput.onchange = function() {
-    //     fiat = this.value;
-    // }
 
     document.getElementById("swap").onclick = function() {
-        const conversionInfo = document.getElementById("conversion-info");
+        const conversionInfo = document.getElementById("swap");
         const convertFromElement = document.getElementById("convert-from");
         const convertToElement = document.getElementById("convert-to");
         document.getElementById("amount").value = 0;
 
         if (conversionType) {
             // convert from fiat to crypto
-            conversionType = false;
+            conversionType = !conversionType;
             conversionInfo.innerHTML = "Fiat to Crypto";
             convertFromElement.appendChild(fiatInput);
             convertToElement.appendChild(cryptoInput);
 
         } else {
             // convert from crypto to fiat
-            conversionType = true;
+            conversionType = !conversionType;
             conversionInfo.innerHTML = "Crypto to Fiat";
             convertFromElement.appendChild(cryptoInput);
             convertToElement.appendChild(fiatInput);

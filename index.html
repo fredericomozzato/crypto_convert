@@ -20,25 +20,45 @@
         <form>
             <div id="info">
                 <div id="convert-from">
-                    <select name="cryptos" id="cryptoList">
+                    <form id="crypto-datalist">
+                        <input id="crypto-input" list="crypto-list" name="coin">
+                        <datalist id="crypto-list">
+                            <option value="BTC" data-ticker="BTC" data-id="bitcoin">BTC</option>
+                            <option value="ETH" data-ticker="ETH" data-id="ethereum">ETH</option>
+                            <option value="ADA" data-ticker="ADA" data-id="cardano">ADA</option>
+                            <option value="SOL" data-ticker="SOL" data-id="solana">SOL</option>                            
+                        </datalist>
+                    </form>
+                    <!-- <select name="cryptos" id="cryptoList">
                         <option data-ticker="" value="">Coins</option>
                         <option data-ticker="BTC" value="bitcoin">BTC</option>
                         <option data-ticker="ETH" value="ethereum">ETH</option>
                         <option data-ticker="ADA" value="cardano">ADA</option>
                         <option data-ticker="SOL" value="solana">SOL</option>
-                    </select>
+                    </select> -->
                 </div>
     
                 <input type="number" name="amount" id="amount" min="0" value="0">
     
                 <div id="convert-to">
-                    <select name="fiat" id="fiatList">
+                    <form id="fiat-datalist">
+                        <input id="fiat-input" list="fiat-list" name="fiat">
+                        <datalist id="fiat-list">
+                            <option value="USD" data-ticker="USD" data-id="usd">USD</option>
+                            <option value="EUR" data-ticker="EUR" data-id="eur">EUR</option>
+                            <option value="BRL" data-ticker="BRL" data-id="brl">BRL</option>
+                            <option value="JPY" data-ticker="JPY" data-id="jpy">JPY</option>
+                        </datalist>
+
+                    </form>
+
+                    <!-- <select name="fiat" id="fiatList">
                         <option data-ticker="" value="">Fiat</option>
                         <option data-ticker="USD" value="usd">USD</option>
                         <option data-ticker="EUR" value="eur">EUR</option>
                         <option data-ticker="BRL" value="brl">BRL</option>
                         <option data-ticker="JPY" value="jpy">JPY</option>
-                    </select>
+                    </select> -->
                 </div>
             </div>
             

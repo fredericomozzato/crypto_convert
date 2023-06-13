@@ -2,25 +2,30 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: auto;
     text-align: center;
-    background-color: rgb(25, 22, 49);
+    background-color: slategray;
     
 }
 
 h1 {
-    color: rgb(25, 22, 49);
-    font-size: 2.6rem;
+    color: black;
+    font-size: 3.5rem;
     text-decoration: underline;
+    margin-bottom: 60px;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
     margin: auto;
-    margin-top: 20px;
     background-color: aliceblue;
-    max-width: 500px;
-    height: 300px;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 5px 5px 5px;
+    max-width: fit-content;
+    height: 100vh;
+    /* border-radius: 5px; */
+    padding: 50px;
+    /* box-shadow: 5px 5px 5px; */
 }
 
 #conversion-div {
@@ -36,8 +41,26 @@ main {
 }
 
 #display {
-    font-size: larger;
-    color: rgb(25, 22, 49);
+    color: black;
+    min-height: 300px;
+    gap: 30px;
+}
+
+#display h4 {
+    font-size: 1.5rem;
+}
+
+#display h3 {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+#display h5 {
+    font-size: 1rem;
+    color: slategray;
+    margin-top: -30px;
+    text-decoration: overline;
+    font-weight: 100;
 }
 
 h4 {
@@ -47,18 +70,44 @@ h4 {
 }
 
 button {
-    font-weight: 900;
-    color:rgb(25, 22, 49);
+    font-size: 1.3rem;
+    /* font-weight: ; */
+    color: black;
     border: silver solid 1px;
-    padding: 3px;
+    padding: 5px;
     border-radius: 2px;
 }
 
+#swap {
+    width: 155px;
+}
+
 #convert {
-    width: 120px;
-    margin-top: 20px;
+    width: 155px;
+    margin-top: 10px;
 }
  
-select {
-    width: 80px;
+input {
+    width: 150px;
+    height: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: slategray solid 1px;
+}
+
+footer {
+    color: slategray;
+    font-weight:100;
+}
+
+a {
+    color: slategray;
+}
+
+a:visited {
+    color: slategray;
+}
+
+a:hover {
+    color: black;
 }
